@@ -257,8 +257,8 @@ public class PlayerListener extends ModifyworldListener {
 						break;
 					}
 				case EGG:
-				case SNOW_BALL:
-				case EXP_BOTTLE:
+				case SNOWBALL:
+				case EXPERIENCE_BOTTLE:
 					if (permissionDenied(player, "modifyworld.items.throw", player.getItemInHand())) {
 						event.setUseItemInHand(Result.DENY);
 						//Denying a potion works fine, but the client needs to be updated because it already reduced the item.
@@ -267,11 +267,15 @@ public class PlayerListener extends ModifyworldListener {
 						}
 					}
 					return; // no need to check further
+				//Disabled, too many to check one-by-one
+				//TODO: Recreate check
+				/*
 				case MONSTER_EGG: // don't add MONSTER_EGGS here
 					if (permissionDenied(player, "modifyworld.spawn", ((SpawnEgg)player.getItemInHand().getData()).getSpawnedType())) {
 						event.setUseItemInHand(Result.DENY);
 					}
 					return; // no need to check further
+				*/
 			}
 		}
 
