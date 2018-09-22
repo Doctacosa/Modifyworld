@@ -1,7 +1,8 @@
 name: Modifyworld
 main: ru.tehkode.modifyworld.bukkit.Modifyworld
 soft-depend: [ PermissionsEx, Vault ]
-version: "${project.version}"
-author: t3hk0d3
+version: 3.0
+api-version: 1.13
+author: t3hk0d3, Doctacosa
 website: www.bukkit.org
 description: World modification permission ruleset
